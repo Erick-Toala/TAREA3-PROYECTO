@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- link para el código css-->
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <!-- link para los logos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Barra lateral que contendrá todas las opciones de navegación por el sistema -->
+    <div class="sidebar">
+        <div class="logo_contenido">
+            <div class="logoHotel">
+                <!-- Icono y nombre del hotel -->
+                <i class='bx bx-building'></i>
+                <div class="logo_nombre">Mi Hotel</div>
+            </div>
+            <!-- Boton para desplegar o plegar la barra lateral -->
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <!-- Lista de navegacion de las opciones del sistema-->
+        <!-- se usó logos <i></i> en cada item para que se vea más fachero, 
+        estos proporcionados por la pagina boxicons-->
+        <ul class="nav_list">
+            <li>
+                    <!-- item Buscar -->
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Buscar...">
+                    <span class="info_herramienta">Buscar</span>
+            </li>
+            <li>
+                <!-- item para la Dashboard -->
+                <a href="Dashboard.html"> <!-- Redireccionará al contenido inicial-->
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="nombre_link">Dashboard</span>
+                </a>
+                    <span class="info_herramienta">Dashboard</span>
+            </li>
+            <li>
+                <!-- item para la Gestión del hotel -->
+                <a href="#"> <!-- Redireccionará a la página de gestión-->
+                    <i class='bx bx-slider'></i>
+                    <span class="nombre_link">Gestion</span>
+                </a>
+                    <span class="info_herramienta">Gestion</span>
+            </li>
+            <li>
+                <!-- item para la Tienda del hotel -->
+                <a href="#"> <!-- Redireccionará a la página de la tienda-->
+                    <i class='bx bx-store'></i> 
+                    <span class="nombre_link">Tienda</span>
+                </a>
+                    <span class="info_herramienta">Tienda</span>
+            </li>
+            <li>
+                <!-- item para el Mantenimiento del hotel -->
+                <a href="#"> <!-- Redireccionará a la página de mentenimiento-->
+                    <i class='bx bx-cog' ></i>
+                    <span class="nombre_link">Mantenimiento</span>
+                </a>
+                    <span class="info_herramienta">Mantenimiento</span>
+            </li>
+            <li>
+                <!-- item para los Reportes del hotel -->
+                <a href="#"> <!-- Redireccionará a la página de reportes-->
+                    <i class='bx bx-bar-chart-alt-2'></i>
+                    <span class="nombre_link">Reportes</span>
+                </a>
+                    <span class="info_herramienta">Reportes</span>
+            </li>
+            <li> 
+                <!-- item para los Usuarios del hotel -->
+                <a href="#"> <!-- Redireccionará a la página de usuarios-->
+                    <i class='bx bx-user'></i>
+                    <span class="nombre_link">Usuarios</span>
+                </a>
+                    <span class="info_herramienta">Usuarios</span>
+            </li>
+            <li>
+                <!-- item para los Clientes del hotel -->
+                <a href="#"> <!-- Redireccionará a la página de clientes-->
+                    <i class='bx bx-group'></i>
+                    <span class="nombre_link">Clientes</span>
+                </a>
+                    <span class="info_herramienta">Clientes</span>
+            </li>
+        </ul>
+        <!-- Esta parte mostrará el usuario que haya iniciado sesión en el sistema-->
+        <div class="perfil_contenido">
+            <div class="perfil">
+                <div class="perfil_detalles">
+                    <!-- foto respectiva del usuario -->
+                    <img src="perfil.jpg" alt="">
+                    <div class="nombre_trabajo">
+                        <!-- Nombre y rol respectivos del usuario -->
+                        <div class="nombre">Erick Toala</div>
+                        <div class="rol">Administrador</div>
+                    </div>
+                </div>
+                <!-- icono para la opción de cerrar sesión-->
+                <i class='bx bx-log-out' id="salir"></i>
+            </div>   
+        </div>
+    </div>
+    <!-- contenido principal del sistema-->
+    <div class="inicio_contenido">
+        <div class="contenido_pagina">
+            <div class="texto">Dashboard</div>
+            <!-- Mostrará una lista de todas las habitaciones del hotel-->
+            <div class="habitaciones_lista">
+                <!-- cada habitación se contendrá en una caja y estas tendrán un id único, 
+                con sus categoria y el estado en que se encuentre-->
+                <div class="habitaciones_box">
+                    <a href="">
+                        <!-- habitación 001-->
+                        <div class="habitacion">
+                            <img src="habitaciones/habitacion1.jpg">
+                            <div class="detalle_titulo">Habitación NRO: 001</div>
+                            <div class="detalle_categoria">Categoria: Individual</div>
+                            <div class="detalle_disponibilidad_limpieza">Estado: Limpieza ></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="habitaciones_box">
+                    <a href="">
+                        <!-- habitación 002-->
+                        <div class="habitacion">
+                            <img src="habitaciones/habitacion2.jpg">
+                            <div class="detalle_titulo">Habitación NRO: 002</div>
+                            <div class="detalle_categoria">Categoria: Doble</div>
+                            <div class="detalle_disponibilidad_ocupado">Estado: Ocupado ></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="habitaciones_box">
+                    <a href="Habitacion.html">
+                        <!-- habitación 003-->
+                        <div class="habitacion">
+                            <img src="habitaciones/habitacion2.jpg">
+                            <div class="detalle_titulo">Habitación NRO: 003</div>
+                            <div class="detalle_categoria">Categoria: Doble</div>
+                            <div class="detalle_disponibilidad">Estado: Disponible ></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="habitaciones_box">
+                    <a href="Habitacion.html">
+                        <!-- habitación 004-->
+                        <div class="habitacion">
+                            <img src="habitaciones/habitacion1.jpg">
+                            <div class="detalle_titulo">Habitación NRO: 004</div>
+                            <div class="detalle_categoria">Categoria: Individual</div>
+                            <div class="detalle_disponibilidad">Estado: Disponible ></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="habitaciones_box">
+                    <a href="">
+                        <!-- habitación 005-->
+                        <div class="habitacion">
+                            <img src="habitaciones/habitacion1.jpg">
+                            <div class="detalle_titulo">Habitación NRO: 005</div>
+                            <div class="detalle_categoria">Categoria: Individual</div>
+                            <div class="detalle_disponibilidad_ocupado">Estado: Ocupado ></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="habitaciones_box">
+                    <a href="Habitacion.html">
+                        <!-- habitación 006-->
+                        <div class="habitacion">
+                            <img src="habitaciones/habitacion1.jpg">
+                            <div class="detalle_titulo">Habitación NRO: 006</div>
+                            <div class="detalle_categoria">Categoria: Individual</div>
+                            <div class="detalle_disponibilidad">Estado: Disponible ></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="habitaciones_box">
+                    <a href="">
+                        <!-- habitación 007-->
+                        <div class="habitacion">
+                            <img src="habitaciones/habitacion2.jpg">
+                            <div class="detalle_titulo">Habitación NRO: 007</div>
+                            <div class="detalle_categoria">Categoria: Doble</div>
+                            <div class="detalle_disponibilidad_limpieza">Estado: Limpieza ></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="habitaciones_box">
+                    <a href="Habitacion.html">
+                        <!-- habitación 008-->
+                        <div class="habitacion">
+                            <img src="habitaciones/habitacion1.jpg">
+                            <div class="detalle_titulo">Habitación NRO: 008</div>
+                            <div class="detalle_categoria">Categoria: Individual</div>
+                            <div class="detalle_disponibilidad">Estado: Disponible ></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="habitaciones_box">
+                    <a href="Habitacion.html">
+                        <!-- habitación 009-->
+                        <div class="habitacion">
+                            <img src="habitaciones/habitacion1.jpg">
+                            <div class="detalle_titulo">Habitación NRO: 009</div>
+                            <div class="detalle_categoria">Categoria: Individual</div>
+                            <div class="detalle_disponibilidad">Estado: Disponible ></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="habitaciones_box">
+                    <a href="">
+                        <!-- habitación 010-->
+                        <div class="habitacion">
+                            <img src="habitaciones/habitacion2.jpg">
+                            <div class="detalle_titulo">Habitación NRO: 010</div>
+                            <div class="detalle_categoria">Categoria: Doble</div>
+                            <div class="detalle_disponibilidad_ocupado">Estado: Ocupado ></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- fin del listado de habitaciones, este listado será generado por la base de datos, 
+            por ahora solo es un diseño -->
+        </div>
+    </div>
+    <!-- este script se usará para activar la opción de desplegar o plegar la barra lateral -->
+    <script>
+        //botón para el menú = #btn, barralateral = .sidebar, opción de buscar = bx-search
+        let btn=document.querySelector("#btn");
+        let sidebar=document.querySelector(".sidebar");
+        let buscarBtn=document.querySelector("bx-search");
+        //el botón btn activará esta función para desplegar o plegar la barra lateral con un click
+        btn.onclick=function(){
+            sidebar.classList.toggle("active"); 
+        }
+        buscarBtn.onclick=function(){
+            sidebar.classList.toggle("active"); 
+        }
+    </script>
+</body>
+</html>
